@@ -26,18 +26,5 @@ public class MyeliteedgeApplication {
 	}
 
 }
-//@Component
-//@RequiredArgsConstructor
-//class SqlServerDemo {
-//
-//	private final JdbcTemplate template;
-//
-//	@EventListener(ApplicationReadyEvent.class)
-//	public void ready(){
-//		List<Customer> customers = this.template.query("select * from CUSTOMERS where id =1",
-//				(resultSet, i) -> new Customer(resultSet.getInt("id"), resultSet.getString("name")));
-//		customers.forEach(customer ->System.out.println(customer));
-//	}
-//}
 
 
