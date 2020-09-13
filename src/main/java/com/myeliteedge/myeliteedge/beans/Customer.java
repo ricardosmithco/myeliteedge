@@ -1,21 +1,16 @@
-package com.myeliteedge.pojos;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+package com.myeliteedge.myeliteedge.beans;
 
 import java.util.Objects;
-
 
 public class Customer {
     private Integer id;
     private String name;
 
-    Customer() {
+    public Customer() {
         super();
     }
 
-    Customer(String name) {
+    public Customer(String name) {
         this.name = name;
     }
 

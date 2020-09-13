@@ -1,6 +1,6 @@
-package com.myeliteedge.pojos;
+package com.myeliteedge.myeliteedge.beans;
+import com.myeliteedge.myeliteedge.beans.Credential;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Objects;
 

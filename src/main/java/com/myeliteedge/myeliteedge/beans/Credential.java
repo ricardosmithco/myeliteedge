@@ -1,4 +1,4 @@
-package com.myeliteedge.pojos;
+package com.myeliteedge.myeliteedge.beans;
 
 import java.util.Objects;
 
@@ -62,3 +62,4 @@ public class Credential {
                 '}';
     }
 }
+
