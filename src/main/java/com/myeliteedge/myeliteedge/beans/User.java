@@ -15,15 +15,26 @@ public class User {
     private Timestamp activeUntil;
     private Boolean isRecruiter;
 
-    User(){super();}
-    User(String firstName, String lastName, String email, Credential credential, Timestamp createdOn, Timestamp activeUntil, Boolean isRecruiter){
+    public User(){super();}
+    public User(String firstName, String lastName, String email, Timestamp createdOn, Timestamp activeUntil, Boolean isRecruiter, Credential credential){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.credential = credential;
         this.createdOn = createdOn;
         this.activeUntil = activeUntil;
         this.isRecruiter = isRecruiter;
+        this.credential = credential;
+    }
+
+    public User(Integer userID, String firstName, String lastName, String email, Timestamp createdOn, Timestamp activeUntil, Boolean isRecruiter, Credential credential){
+        this.userID = userID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.createdOn = createdOn;
+        this.activeUntil = activeUntil;
+        this.isRecruiter = isRecruiter;
+        this.credential = credential;
     }
 
     public Integer getUserID() {
@@ -89,6 +100,8 @@ public class User {
     public void setRecruiter(Boolean recruiter) {
         isRecruiter = recruiter;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

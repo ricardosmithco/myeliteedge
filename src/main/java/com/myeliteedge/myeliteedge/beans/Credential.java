@@ -8,8 +8,14 @@ public class Credential {
     private String username;
     private String password;
 
-    Credential(){ super(); }
-    Credential(String username, String password){
+    public Credential(){ super(); }
+    public Credential(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
+
+    public Credential(Integer credentialID, String username, String password){
+        this.credentialID = credentialID;
         this.username = username;
         this.password = password;
     }
