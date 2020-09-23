@@ -32,4 +32,9 @@ public class UserRepository {
         newUser.setActiveUntil(user.getActiveUntil());
         return newUser;
     }
+
+    //return true if email exists in DB and false if email is available (where username is email)
+    public boolean isUsernameValid(String username){
+        return false;
+    }
 }

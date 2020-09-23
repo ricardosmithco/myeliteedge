@@ -14,4 +14,8 @@ public class UserService {
     public User createUser(User user){
         return repository.createUser(user);
     }
+
+    public boolean isUsernameValid(String username){
+        return repository.isUsernameValid(username);
+    }
 }
