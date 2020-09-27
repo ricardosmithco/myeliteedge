@@ -37,6 +37,15 @@ public class User {
         this.credential = credential;
     }
 
+    public User (String firstName, String lastName, String email, Timestamp createdOn, Timestamp activeUntil, Boolean isRecruiter){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.createdOn = createdOn;
+        this.activeUntil = activeUntil;
+        this.isRecruiter = isRecruiter;
+    }
+
     public Integer getUserID() {
         return userID;
     }

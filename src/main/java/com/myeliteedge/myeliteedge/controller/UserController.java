@@ -3,10 +3,7 @@ package com.myeliteedge.myeliteedge.controller;
 import com.myeliteedge.myeliteedge.beans.User;
 import com.myeliteedge.myeliteedge.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/users")
@@ -19,4 +16,7 @@ public class UserController {
     public User createUser(@RequestBody User user){
         return service.createUser(user);
     }
+
+    @RequestMapping(value="/isValidEmail/{email}", method = RequestMethod.GET)
+    public boolean isValidEmail(@PathVariable String email){ return service.isValidEmail(email);}
 }

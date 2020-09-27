@@ -4,40 +4,27 @@ import java.util.Objects;
 
 public class Credential {
 
-    private Integer credentialID;
-    private String username;
+    private String email;
     private String password;
 
     public Credential(){ super(); }
-    public Credential(String username, String password){
-        this.username = username;
+    public Credential(String email, String password){
+        this.email = email;
         this.password = password;
     }
 
-    public Credential(Integer credentialID, String username, String password){
-        this.credentialID = credentialID;
-        this.username = username;
-        this.password = password;
-    }
 
-    public Integer getCredentialID() {
-        return credentialID;
-    }
-
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setCredentialID(Integer credentialID) {
-        this.credentialID = credentialID;
-    }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setPassword(String password) {
@@ -49,21 +36,19 @@ public class Credential {
         if (this == o) return true;
         if (!(o instanceof Credential)) return false;
         Credential that = (Credential) o;
-        return Objects.equals(getCredentialID(), that.getCredentialID()) &&
-                Objects.equals(getUsername(), that.getUsername()) &&
+        return Objects.equals(getEmail(), that.getEmail()) &&
                 Objects.equals(getPassword(), that.getPassword());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getCredentialID(), getUsername(), getPassword());
+        return Objects.hash(getEmail(), getPassword());
     }
 
     @Override
     public String toString() {
         return "Credential{" +
-                "credentialID=" + credentialID +
-                ", username='" + username + '\'' +
+                "username='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
